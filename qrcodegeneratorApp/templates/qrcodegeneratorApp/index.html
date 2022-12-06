@@ -1,0 +1,64 @@
+{% extends 'homeApp/baseApp.html' %}
+{% load static %}
+
+{% block title %}
+QR Code Generator
+{% endblock %}
+
+{% block leftColumnAPPcontent %}
+    <p>QR Codes allow smartphone users to access your website simply and quicly.</p>
+    <p>Enter your URL below to generate a QR Code and download the image.</p>
+
+    <form id="generate-form">
+
+        <div class="input-field">
+            <input placeholder="Enter your URL " id="url" class="input-field" type="url" name="url">
+            <label for="url">URL (*://* is mandatory)</label>
+        </div>
+
+        <div class="input-field">
+            <select id="size">
+                <option value="" disabled selected>Choose your image size</option>
+                <option value="100">100x100px</option>
+                <option value="200">200x200px</option>
+                <option value="300" selected>300x300px</option>
+                <option value="400">400x400px</option>
+                <option value="500">500x500px</option>
+                <option value="600">600x600px</option>
+                <option value="700">700x700px</option>
+            </select>
+            <label>Image Size</label>
+        </div>
+
+        <button class="btn waves-effect waves-light" type="submit" name="action">Generate QR Code
+            <i class="material-icons right">send</i>
+        </button>
+
+    </form>
+{% endblock %}
+
+{% block rightColumnAPPcontent %}
+<div class="image-wrapper">
+    <img class="qr-code-image" src="{% static 'qrcodegeneratorApp/images/qr-code.svg' %}">
+</div>
+{% endblock %}
+
+{% block footerAPPcontent %}
+<div id="output-wrapper">
+    <div id="spinner" class="spinner"></div>
+    <div id="qrcode" class="m-auto"></div>
+</div>
+{% endblock %}
+
+{% block staticAPPcontent %}
+<!-- CSS  -->
+<link rel="stylesheet" type="text/css" href="{% static 'qrcodegeneratorApp/styles/styles.css' %}">
+
+<!-- Scripts -->
+<script type="text/Javascript" src="{% static 'qrcodegeneratorApp/scripts/script.js' %}"></script>
+
+<!-- QRcode library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}

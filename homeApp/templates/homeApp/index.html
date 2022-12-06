@@ -43,7 +43,8 @@ Osamu Katagiri
                     <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
                 </div>
 
-                <p id="settings-note">* Theme stolen from <a target="_blank" href="https://dennisivy.com/">Dennis Ivy</a>
+                <p id="settings-note">* Theme stolen from <a target="_blank" href="https://dennisivy.com/">Dennis
+                        Ivy</a>
                 </p>
             </div>
 
@@ -81,7 +82,8 @@ Osamu Katagiri
 
                 <h4>TOP EXPERTISE</h4>
                 <p>Digital Systems & Robotics Engineer with primary focus on Systems & Software Development: <a
-                        target="_blank" href="{% static 'homeApp/documents/CV_OsamuKatagiri_Nov2022.pdf' %}">Download Resume</a></p>
+                        target="_blank" href="{% static 'homeApp/documents/CV_OsamuKatagiri_Nov2022.pdf' %}">Download
+                        Resume</a></p>
 
                 <div id="skills">
                     <ul>
@@ -125,40 +127,22 @@ Osamu Katagiri
 
         <div class="post-wrapper">
 
+
+            <!-- qrcodegeneratorApp -->
             <div>
-                <div class="post">
-                    <img class="thumbnail" src="{% static 'homeApp/images/thumbnail_QRcodeGenerator.png' %}">
-                    <!-- <div class="thumbnail"></div> -->
-                    <div class="post-preview">
-                        <h6 class="post-title">QR Code Generator</h6>
-                        <p class="post-intro">QR Codes allow smartphone users to access your website simply and quicly.
-                        </p>
-                        <a href="#my-projects" onclick="getScreenshot()">Open Project</a>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{% static 'qrcodegeneratorApp/images/thumbnail_qrcodegeneratorApp.jpg' %}">
+                        <a href="{% url 'qrcodegeneratorApp:index' %}" class="btn-floating btn-large halfway-fab waves-effect waves-light amber darken-4">
+                            <i class="large material-icons">open_in_browser</i></a>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">QR Code Generator</span>
+                        <p class="card-description">QR Codes allow smartphone users to access your website simply and quicly.</p>
                     </div>
                 </div>
             </div>
 
-            <!--         <div>
-          <div class="post">
-            <img class="thumbnail" src="images/meFiesole.jpg">
-            <div class="post-preview">
-              <h6 class="post-title">Post Title</h6>
-              <p class="post-intro">This is a sentence. Some more text.</p>
-              <a href="post.html">Read More</a>
-            </div>
-          </div>
-        </div> -->
-
-            <!--         <div>
-          <div class="post">
-            <img class="thumbnail" src="images/meFiesole.jpg">
-            <div class="post-preview">
-              <h6 class="post-title">Post Title</h6>
-              <p class="post-intro">This is a sentence. Some more text.</p>
-              <a href="post.html">Read More</a>
-            </div>
-          </div>
-        </div> -->
 
         </div>
     </div>
