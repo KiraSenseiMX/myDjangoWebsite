@@ -364,33 +364,10 @@ h6 {
     justify-content: center;
 }
 
-.post {
-    border: 1px solid var(--borderColor);
-    -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
-}
-
-.thumbnail {
-    display: block;
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.post-preview {
-    background-color: #fff;
-    padding: 15px;
-}
-
-.post-title {
+.card-title,
+.card-description {
     color: black;
     margin: 0;
-}
-
-.post-intro {
-    color: #4b5156;
-    font-size: 14px;
 }
 
 #contact-form {
