@@ -206,7 +206,7 @@ h6 {
 
     padding: 10px;
 
-    border: 1px dashed salmon;
+    /* border: 1px dashed salmon; */
 }
 
 #profile_pic {
@@ -274,7 +274,7 @@ h6 {
 
     padding: 10px;
 
-    border: 1px dashed salmon;
+    /* border: 1px dashed salmon; */
 }
 
 #preview-shadow {
@@ -301,7 +301,7 @@ h6 {
 
     padding: 10px;
 
-    border: 1px dashed salmon;
+    /* border: 1px dashed salmon; */
 }
 
 .corner {
@@ -336,8 +336,6 @@ h6 {
 .about-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-/*     padding-top: 50px;
-    padding-bottom: 50px; */
     gap: 100px;
 }
 
@@ -364,7 +362,6 @@ h6 {
     grid-template-columns: repeat(auto-fit, 320px);
     gap: 20px;
     justify-content: center;
-    /* padding-bottom: 15px; */
 }
 
 .post {
