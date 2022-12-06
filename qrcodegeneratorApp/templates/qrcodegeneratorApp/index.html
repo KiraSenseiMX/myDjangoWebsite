@@ -1,67 +1,66 @@
-{% extends 'homeApp/base.html' %}
+{% extends 'homeApp/baseApp.html' %}
 {% load static %}
 
 {% block title %}
 QR Code Generator
 {% endblock %}
 
-{% block content %}
+{% block leftColumnAPPcontent %}
+<div class="form-wrapper">
+    <p>QR Codes allow smartphone users to access your website simply and quicly.</p>
+    <p>Enter your URL below to generate a QR Code and download the image.</p>
 
-<section class="s1">
-    <div class="main-container">
+    <form id="generate-form">
 
-        <div class="greeting-wrapper">
-            <h1>QR Code Generator</h1>
+        <div class="input-field">
+            <input placeholder="Enter your URL " id="url" class="input-field" type="url" name="url">
+            <label for="url">URL (*://* is mandatory)</label>
         </div>
 
-        <div class="intro-wrapper">
-            <div class="nav-wrapper">
-
-                <div class="dots-wrapper">
-                    <div id="dot-1" class="browser-dot"></div>
-                    <div id="dot-2" class="browser-dot"></div>
-                    <div id="dot-3" class="browser-dot"></div>
-                </div>
-
-                <ul id="navigation">
-                    <li>
-                        <a href="{% url 'homeApp:index' %}#my-projects">
-                            <i class="small material-icons">home</i>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="left-column">
-                <img id="profile_pic" src="{% static 'homeApp/images/meFiesole.jpg' %}">
-                <h5 style="text-align: center; line-height: 0;">Personalize Theme</h5>
-
-                <div id="theme-options-wrapper">
-                    <div data-mode="light" id="light-mode" class="theme-dot"></div>
-                    <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
-                    <div data-mode="green" id="green-mode" class="theme-dot"></div>
-                    <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
-                </div>
-
-                <p id="settings-note">* Theme stolen from <a target="_blank" href="https://dennisivy.com/">Dennis Ivy</a>
-                </p>
-            </div>
-
-            <div class="right-column">
-
-                <div id="preview-shadow">
-                    <div id="preview">
-                        <div id="corner-tl" class="corner"></div>
-                        <div id="corner-tr" class="corner"></div>
-                        <h3>What I Do</h3>
-                        <p>I was a Software Developer in a past life, now I enjoy Systems Engineering.</p>
-                        <div id="corner-br" class="corner"></div>
-                        <div id="corner-bl" class="corner"></div>
-                    </div>
-                </div>
-            </div>
+        <div class="input-field">
+            <select id="size">
+                <option value="" disabled selected>Choose your image size</option>
+                <option value="100">100x100px</option>
+                <option value="200">200x200px</option>
+                <option value="300" selected>300x300px</option>
+                <option value="400">400x400px</option>
+                <option value="500">500x500px</option>
+                <option value="600">600x600px</option>
+                <option value="700">700x700px</option>
+            </select>
+            <label>Image Size</label>
         </div>
-    </div>
-</section>
 
+        <button class="btn waves-effect waves-light" type="submit" name="action">Generate QR Code
+            <i class="material-icons right">send</i>
+        </button>
+
+    </form>
+</div>
+{% endblock %}
+
+{% block rightColumnAPPcontent %}
+<div class="image-wrapper">
+    <img class="qr-code-image" src="{% static 'qrcodegeneratorApp/images/qr-code.svg' %}">
+</div>
+{% endblock %}
+
+{% block footerAPPcontent %}
+<div id="output-wrapper">
+    <div id="spinner" class="spinner"></div>
+    <div id="qrcode" class="m-auto"></div>
+</div>
+{% endblock %}
+
+{% block staticAPPcontent %}
+<!-- CSS  -->
+<link rel="stylesheet" type="text/css" href="{% static 'qrcodegeneratorApp/styles/styles.css' %}">
+
+<!-- Scripts -->
+<script type="text/Javascript" src="{% static 'qrcodegeneratorApp/scripts/script.js' %}"></script>
+
+<!-- QRcode library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 {% endblock %}

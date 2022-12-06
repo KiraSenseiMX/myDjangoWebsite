@@ -80,12 +80,18 @@ h6 {
     background-color: var(--mainColor);
     border-bottom: 1px solid var(--borderColor);
     overflow: auto;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .s2 {
     background-color: var(--secondaryColor);
     border-bottom: 1px solid var(--borderColor);
     overflow: auto;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .main-container {
@@ -94,10 +100,13 @@ h6 {
 }
 
 .greeting-wrapper {
+    grid-area: greeting-wrapper;
     display: grid;
     text-align: center;
     align-content: center;
-    min-height: 10em;
+    min-height: 1em;
+
+    /* border: 1px dashed salmon; */
 }
 
 .intro-wrapper {
@@ -114,6 +123,25 @@ h6 {
     grid-template-areas:
         'nav-wrapper nav-wrapper'
         'left-column right-column'
+    ;
+}
+
+.app-wrapper {
+    background-color: var(--secondaryColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 5px 5px 0 0;
+
+    -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        'nav-wrapper nav-wrapper'
+        'greeting-wrapper greeting-wrapper'
+        'left-column right-column'
+        'footer-wrapper footer-wrapper'
     ;
 }
 
@@ -171,10 +199,14 @@ h6 {
     box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 }
 
-.left-column {
+.left-column{
     grid-area: left-column;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    display: grid;
+    align-content: center;
+
+    padding: 10px;
+
+    /* border: 1px dashed salmon; */
 }
 
 #profile_pic {
@@ -240,8 +272,9 @@ h6 {
     display: grid;
     align-content: center;
 
-    padding-top: 5px;
-    padding-bottom: 50px;
+    padding: 10px;
+
+    border: 1px dashed salmon;
 }
 
 #preview-shadow {
@@ -250,6 +283,7 @@ h6 {
     height: 180px;
     padding-left: 20px;
     padding-top: 20px;
+    margin-bottom: 25px;
 }
 
 #preview {
@@ -258,6 +292,16 @@ h6 {
     background-color: var(--previewBg);
     padding: 15px;
     position: relative;
+}
+
+.footer-wrapper{
+    grid-area: footer-wrapper;
+    display: grid;
+    align-content: center;
+
+    padding: 10px;
+
+    border: 1px dashed salmon;
 }
 
 .corner {
@@ -292,8 +336,8 @@ h6 {
 .about-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    padding-top: 50px;
-    padding-bottom: 50px;
+/*     padding-top: 50px;
+    padding-bottom: 50px; */
     gap: 100px;
 }
 
@@ -320,7 +364,7 @@ h6 {
     grid-template-columns: repeat(auto-fit, 320px);
     gap: 20px;
     justify-content: center;
-    padding-bottom: 15px;
+    /* padding-bottom: 15px; */
 }
 
 .post {
@@ -399,12 +443,14 @@ h6 {
 }
 
 @media screen and (max-width: 800px) {
-    .intro-wrapper {
+    .app-wrapper {
         grid-template-columns: 1fr;
         grid-template-areas:
             'nav-wrapper'
+            'greeting-wrapper'
             'left-column'
             'right-column'
+            'footer-wrapper'
         ;
     }
 
