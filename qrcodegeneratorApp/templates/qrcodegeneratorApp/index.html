@@ -1,12 +1,14 @@
 {% extends 'homeApp/baseApp.html' %}
 {% load static %}
 
+
 {% block title %}
 QR Code Generator
 {% endblock %}
 
+
 {% block leftColumnAPPcontent %}
-    <p>QR Codes allow smartphone users to access your website simply and quicly.</p>
+    <p>QR Codes allow smartphone users to access websites simply and quicly.</p>
     <p>Enter your URL below to generate a QR Code and download the image.</p>
 
     <form id="generate-form">
@@ -37,11 +39,13 @@ QR Code Generator
     </form>
 {% endblock %}
 
+
 {% block rightColumnAPPcontent %}
 <div class="image-wrapper">
     <img class="qr-code-image" src="{% static 'qrcodegeneratorApp/images/qr-code.svg' %}">
 </div>
 {% endblock %}
+
 
 {% block footerAPPcontent %}
 <div id="output-wrapper">
@@ -49,6 +53,7 @@ QR Code Generator
     <div id="qrcode" class="m-auto"></div>
 </div>
 {% endblock %}
+
 
 {% block staticAPPcontent %}
 <!-- CSS  -->
