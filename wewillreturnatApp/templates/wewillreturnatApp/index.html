@@ -8,13 +8,23 @@ We will Return at ...
 
 
 {% block leftColumnAPPcontent %}
-    <p>Usually breaks are given in the middle of long meetings. This will count the time left before returning.</p>
-    <p>Specify the return time and start the countdown.<i class="tiny material-icons">arrow_forward</i></p>
+<p>Breaks are given in the middle of long meetings. This will countdown the time left before returning.</p>
+<h3 style="text-align:center;">Now is {{ now.month }} {{ now.day }}, {{ now.year }} {{ now.hour }}:{{ now.minute }}:{{ now.second }}.{{ now.microsecond }}</h3>
 {% endblock %}
 
 
 {% block rightColumnAPPcontent %}
-
+<form id="generate-form">
+    <div class="input-field">
+        <input
+        type="text"
+        class="timepicker"
+        placeholder="Set the deadline"
+        id="deadline"
+        name="deadline">
+        <label for="deadline">Specify the return time to start the countdown.</label>
+    </div>
+</form>
 {% endblock %}
 
 
@@ -24,5 +34,6 @@ We will Return at ...
 
 
 {% block staticAPPcontent %}
-
+<!-- CSS  -->
+<link rel="stylesheet" type="text/css" href="{% static 'qrcodegeneratorApp/styles/styles.css' %}">
 {% endblock %}
