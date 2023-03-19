@@ -38,11 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'protectlinkApp',
     'wewillreturnatApp',
     'qrcodegeneratorApp',
-    'homeApp',
-    'myapp',
+    'homeApp', # landing page
+    'myapp',   # used as a template
 ]
 
 MIDDLEWARE = [
