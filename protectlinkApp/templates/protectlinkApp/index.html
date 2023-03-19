@@ -59,6 +59,9 @@ Password-protect links
 
 {% block staticAPPcontent %}
 <!-- Scripts -->
+<script type="text/Javascript">
+  absoluteurl = "{{ absoluteurl }}"
+</script>
 <script type="text/Javascript" src="{% static 'protectlinkApp/scripts/api.js' %}"></script>
 <script type="text/Javascript" src="{% static 'protectlinkApp/scripts/b64.js' %}"></script>
 <script type="text/Javascript" src="{% static 'protectlinkApp/scripts/create.js' %}"></script>
