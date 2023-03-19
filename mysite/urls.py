@@ -21,9 +21,11 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('protectlink', include('protectlinkApp.urls')),
-    path('wewillreturnat', include('wewillreturnatApp.urls')),
-    path('qrcodegenerator', include('qrcodegeneratorApp.urls')),
+
+    path('protectlink/', include('protectlinkApp.urls')),
+    path('wewillreturnat/', include('wewillreturnatApp.urls')),
+    path('qrcodegenerator/', include('qrcodegeneratorApp.urls')),
+    
     path('', include('homeApp.urls')),
     #url(r'^jsreverse/$', urls_js, name='js_reverse'),
     path('myapp/', include('myapp.urls')),

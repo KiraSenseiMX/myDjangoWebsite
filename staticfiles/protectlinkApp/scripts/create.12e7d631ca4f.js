@@ -121,7 +121,7 @@ async function onEncrypt() {
 
   const encrypted = await generateFragment(url, password, hint, useRandomSalt,
       useRandomIv);
-  const output = "http://127.0.0.1:8000/protectlinkunlock" + `/#${encrypted}`; //`https://jstrieb.github.io/link-lock/#${encrypted}`;
+  const output = "http://127.0.0.1:8000/protectlink/unlock" + `/#${encrypted}`; //`https://jstrieb.github.io/link-lock/#${encrypted}`;
 
   document.querySelector("#output").value = output;
   highlight("output");

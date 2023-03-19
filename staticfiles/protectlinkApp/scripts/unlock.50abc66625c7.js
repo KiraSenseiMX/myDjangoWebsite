@@ -1,3 +1,5 @@
+console.log('indexThemeScript.js is running')
+
 function error(text) {
   document.querySelector(".form").style.display = "none";
   document.querySelector(".error").style.display = "inherit";
@@ -6,9 +8,6 @@ function error(text) {
 
 // Run when the <body> loads
 function main() {
-
-  console.log('unlock.js main() is running')
-
   if (window.location.hash) {
     document.querySelector(".form").style.display = "inherit";
     document.querySelector("#password").value = "";

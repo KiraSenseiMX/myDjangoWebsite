@@ -12,7 +12,7 @@ Please enter the password to unlock the link.
 {% endblock %}
 
 {% block footerAPPcontent %}
-<div class="form" onload="main()">
+<div class="form">
     <p id="hint"></p>
 
     <label for="password">password</label>
@@ -30,5 +30,5 @@ Please enter the password to unlock the link.
 <!-- Scripts -->
 <script type="text/Javascript" src="{% static 'protectlinkApp/scripts/api.js' %}"></script>
 <script type="text/Javascript" src="{% static 'protectlinkApp/scripts/b64.js' %}"></script>
-<script type="text/Javascript" src="{% static 'protectlinkApp/scripts/unlock.js' %}"></script>
+<script type="text/Javascript" src="{% static 'protectlinkApp/scripts/unlock.js' %}" onload="main()"></script>
 {% endblock %}
