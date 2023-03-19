@@ -96,6 +96,8 @@ async function generateFragment(url, passwd, hint, useRandomSalt, useRandomIv) {
  * Main UI Functions
  ******************************************************************************/
 
+console.log('absoluteurl is: ' + absoluteurl)
+
 // Activated when the "Encrypt" button is pressed
 async function onEncrypt() {
   if (!validateInputs()) {
@@ -121,7 +123,7 @@ async function onEncrypt() {
 
   const encrypted = await generateFragment(url, password, hint, useRandomSalt,
       useRandomIv);
-  const output = "http://127.0.0.1:8000/protectlink/unlock" + `/#${encrypted}`; //`https://jstrieb.github.io/link-lock/#${encrypted}`;
+  const output = absoluteurl + `unlock/#${encrypted}`; //`https://jstrieb.github.io/link-lock/#${encrypted}`;
 
   document.querySelector("#output").value = output;
   highlight("output");
