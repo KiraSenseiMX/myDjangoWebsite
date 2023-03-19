@@ -1,0 +1,34 @@
+{% extends 'homeApp/baseApp.html' %}
+{% load static %}
+
+{% block title %}
+Please enter the password to unlock the link.
+{% endblock %}
+
+{% block leftColumnAPPcontent %}
+{% endblock %}
+
+{% block rightColumnAPPcontent %}
+{% endblock %}
+
+{% block footerAPPcontent %}
+<div class="form" onload="main()">
+    <p id="hint"></p>
+
+    <label for="password">password</label>
+    <input type="password" id="password" autofocus />
+    <button id="unlockbutton">Unlock link</button>
+</div>
+
+<div class="error">
+    <p id="errortext">Error</p>
+    <button onclick="main()">Try again</button>
+</div>
+{% endblock %}
+
+{% block staticAPPcontent %}
+<!-- Scripts -->
+<script type="text/Javascript" src="{% static 'protectlinkApp/scripts/api.js' %}"></script>
+<script type="text/Javascript" src="{% static 'protectlinkApp/scripts/b64.js' %}"></script>
+<script type="text/Javascript" src="{% static 'protectlinkApp/scripts/unlock.js' %}"></script>
+{% endblock %}

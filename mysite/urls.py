@@ -16,10 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+#from django.conf.urls import url
+#from django_js_reverse.views import urls_js
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('protectlink', include('protectlinkApp.urls')),
     path('wewillreturnat', include('wewillreturnatApp.urls')),
     path('qrcodegenerator', include('qrcodegeneratorApp.urls')),
     path('', include('homeApp.urls')),
+    #url(r'^jsreverse/$', urls_js, name='js_reverse'),
     path('myapp/', include('myapp.urls')),
 ]

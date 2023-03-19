@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #'django_js_reverse',
 
+    'protectlinkApp',
     'wewillreturnatApp',
     'qrcodegeneratorApp',
     'homeApp', # landing page
