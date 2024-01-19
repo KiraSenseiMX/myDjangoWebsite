@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('protectlink/', include('protectlinkApp.urls')),
     path('qrcodegenerator/', include('qrcodegeneratorApp.urls')),
+    path('marketplace/', include('marketplaceApp.urls')),
     path('', include('homeApp.urls')),
     path('myapp/', include('myapp.urls')),
 ]

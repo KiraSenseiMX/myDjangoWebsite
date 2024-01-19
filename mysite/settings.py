@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'protectlinkApp',
     'qrcodegeneratorApp',
+    'marketplaceApp',
     'homeApp', # landing page
     'myapp',   # used as a template
 ]
