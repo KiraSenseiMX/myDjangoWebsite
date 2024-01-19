@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'protectlinkApp',
-    'wewillreturnatApp',
     'qrcodegeneratorApp',
     'homeApp', # landing page
     'myapp',   # used as a template

@@ -1,8 +1,3 @@
-/**
- * Created by Jacob Strieb
- * May 2020
- */
-
 var b64 = (function() {
 
   // Generate a dictionary with {key: val} as {character: index in input string}
