@@ -382,15 +382,21 @@ h6 {
     width: 100%;
 }
 
-/* .carousel {
+.carousel {
     height: 400px;
+    position: relative;
 }
 .carousel .carousel-item {
     height: 300px;
 }
 .carousel .carousel-item img {
     height: 300px;
-} */
+}
+
+.materialboxed {
+    position: fixed;
+    z-index: 1;
+}
 
 .post-wrapper {
     display: grid;
