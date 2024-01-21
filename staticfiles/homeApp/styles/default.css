@@ -382,7 +382,7 @@ h6 {
     width: 100%;
 }
 
-.carousel {
+/* .carousel {
     height: 400px;
 }
 .carousel .carousel-item {
@@ -390,7 +390,7 @@ h6 {
 }
 .carousel .carousel-item img {
     height: 300px;
-}
+} */
 
 .post-wrapper {
     display: grid;
